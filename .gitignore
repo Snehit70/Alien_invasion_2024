@@ -1,0 +1,23 @@
+# Byte-compiled files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+.env/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE settings
+.vscode/
+.idea/
+
+# Secrets
+config.json
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
