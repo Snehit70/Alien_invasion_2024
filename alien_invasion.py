@@ -117,7 +117,7 @@ class AlienInvasion:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
 
-    def _update_bullets(self):
+    def _update_bullets(self): 
         """Update position of bullets and get rid of old bullets."""
         # Update bullet positions.
         self.bullets.update()

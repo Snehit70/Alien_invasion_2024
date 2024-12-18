@@ -8,7 +8,7 @@ class Ship(Sprite):
         """Initialize the ship and set its starting position."""
         super().__init__()
         
-        self.screen=ai_game.screen
+        self.screen=ai_game.screen 
         self.settings=ai_game.settings
         self.screen_rect=ai_game.screen.get_rect()
         
