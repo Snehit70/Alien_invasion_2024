@@ -14,7 +14,7 @@ Alien Invasion 2024 is a Python-based game where players defend Earth from alien
 
 ## Requirements
 
-- Python 3.x
+- Python 3.12 and above.
 - Pygame library
 
 ## Installation
