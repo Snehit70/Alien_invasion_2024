@@ -10,6 +10,7 @@ from button import Button
 from ship import Ship
 from bullet import Bullet
 from alien import Alien
+from bgm import BGM
 
 
 class AlienInvasion:
@@ -33,6 +34,9 @@ class AlienInvasion:
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
+        
+        #Create an instance for sound.
+        self.bgm = BGM()
 
         self._create_fleet()
 
@@ -102,7 +106,10 @@ class AlienInvasion:
         elif event.key == pygame.K_q:
             sys.exit()
         elif event.key == pygame.K_SPACE:
-            self._fire_bullet()            
+            self._fire_bullet() 
+            self.bgm.shoot()
+                   
+
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""
@@ -155,6 +162,9 @@ class AlienInvasion:
     def _ship_hit(self):
         """Respond to the ship being hit by an alien."""
         if self.stats.ships_left > 0:
+            #Play sound for ship being hit.
+            self.bgm.crash()
+            
             # Decrement ships_left, and update scoreboard.
             self.stats.ships_left -= 1
             self.sb.prep_ships()
